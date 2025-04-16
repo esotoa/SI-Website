@@ -54,7 +54,13 @@ EOT;
                     </li>
 EOT;
         }
-
+        if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+            echo <<<EOT
+                    <li class="nav-item">
+                        <a class="nav-link" href="addLeader.php">Add Leader</a>
+                    </li>
+EOT;
+        }
         echo <<<EOT
                     <li class="nav-item">
                         <a class="nav-link" href="$logged.php">$logged</a>

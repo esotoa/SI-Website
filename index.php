@@ -10,7 +10,7 @@
     <div class="container">
       <?php
             require_once 'pageFormat.php';
-            pageHeader("HOME", "images/logo.png", "login");
+            pageHeader("Home", "images/logo.png", "login");
         ?>
     </div>
     

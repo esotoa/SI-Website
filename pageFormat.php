@@ -25,9 +25,9 @@
     function pageHeader($title, $img, $logged)
     {
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
-            $logged = "logout";
+            $logged = "Logout";
         } else {
-            $logged = "login";
+            $logged = "Login";
         }
 
         $upperLogged = strtoupper($logged);
@@ -38,27 +38,26 @@
                 <h2 class="m-0">$title</h2>
             </div>
             <nav class="nav-bar">
-                <ul class="nav justify-content-end">
+                <ul class="nav justify-content-end align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">HOME</a>
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://sidocuments.com">SI Documents</a>
-                    </li>
+                        <a class="nav-link" href="https://sidocuments.com">SI Documents</a>
+                    </li>
 EOT;
 
-        
         if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
             echo <<<EOT
                     <li class="nav-item">
-                        <a class="nav-link" href="signup.php">SIGNUP</a>
+                        <a class="nav-link" href="signup.php">Signup</a>
                     </li>
 EOT;
         }
 
         echo <<<EOT
                     <li class="nav-item">
-                        <a class="nav-link" href="$logged.php">$upperLogged</a>
+                        <a class="nav-link" href="$logged.php">$logged</a>
                     </li>
                 </ul>
             </nav>

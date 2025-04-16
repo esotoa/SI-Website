@@ -22,7 +22,7 @@
     <?php
         require_once 'pageFormat.php';
         require_once 'dbConnect.php';
-        pageHeader("LOGIN", "images/logo.png", "login");
+        pageHeader("Login", "images/logo.png", "login");
     ?>
     
     <div class="row justify-content-center"> 

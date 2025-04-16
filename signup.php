@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <body>
     <div class="container">
         <?php
-            pageHeader("SIGNUP", "images/logo.png", "login");
+            pageHeader("Signup", "images/logo.png", "login");
         ?>
 
         <div class="row justify-content-center mt-4">

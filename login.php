@@ -22,9 +22,11 @@
     <?php
         require_once 'pageFormat.php';
         require_once 'dbConnect.php';
+        pageHeader("LOGIN", "images/logo.png", "login");
     ?>
     
     <div class="row justify-content-center"> 
+    <h1 class="text-center">Login</h1>
         <div class="col-md-6">
             <form action="login.php" method="POST" class="p-4 border rounded bg-light">
                 <div class="form-group">

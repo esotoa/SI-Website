@@ -42,6 +42,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.php">HOME</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://sidocuments.com">SI Documents</a>
+                    </li>
 EOT;
 
         

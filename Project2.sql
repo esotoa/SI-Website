@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2025 at 06:14 PM
+-- Generation Time: Apr 16, 2025 at 07:06 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,7 +44,7 @@ INSERT INTO `Leader` (`Id`, `name`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `observations`
+-- Table structure for table `Observations`
 --
 
 CREATE TABLE `Observations` (
@@ -55,10 +55,10 @@ CREATE TABLE `Observations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `observations`
+-- Dumping data for table `Observations`
 --
 
-INSERT INTO `observations` (`id`, `obs_count`, `obs_date`, `observer`) VALUES
+INSERT INTO `Observations` (`id`, `obs_count`, `obs_date`, `observer`) VALUES
 (1, 1, '2025-04-16', 'Luke');
 
 -- --------------------------------------------------------
@@ -69,6 +69,8 @@ INSERT INTO `observations` (`id`, `obs_count`, `obs_date`, `observer`) VALUES
 
 CREATE TABLE `Sessions` (
   `Id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
   `Session_time` varchar(200) NOT NULL,
   `Session_location` varchar(200) NOT NULL,
   `Class_name` varchar(200) NOT NULL
@@ -78,8 +80,8 @@ CREATE TABLE `Sessions` (
 -- Dumping data for table `Sessions`
 --
 
-INSERT INTO `Sessions` (`Id`, `Session_time`, `Session_location`, `Class_name`) VALUES
-(1, '17:00-18:30', 'Atk 310', 'CSCI 1301');
+INSERT INTO `Sessions` (`Id`, `name`, `email`, `Session_time`, `Session_location`, `Class_name`) VALUES
+(1, 'abby ', 'abby@lee.com', '17:00-18:30', 'Atk 310', 'CSCI 1301');
 
 --
 -- Indexes for dumped tables
@@ -89,12 +91,13 @@ INSERT INTO `Sessions` (`Id`, `Session_time`, `Session_location`, `Class_name`) 
 -- Indexes for table `Leader`
 --
 ALTER TABLE `Leader`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indexes for table `observations`
+-- Indexes for table `Observations`
 --
-ALTER TABLE `observations`
+ALTER TABLE `Observations`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -114,7 +117,7 @@ ALTER TABLE `Leader`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `observations`
+-- AUTO_INCREMENT for table `Observations`
 --
 ALTER TABLE `Observations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

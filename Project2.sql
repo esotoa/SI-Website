@@ -47,7 +47,7 @@ INSERT INTO `Leader` (`Id`, `name`, `email`, `password`) VALUES
 -- Table structure for table `observations`
 --
 
-CREATE TABLE `observations` (
+CREATE TABLE `Observations` (
   `id` int(11) NOT NULL,
   `obs_count` int(11) NOT NULL,
   `obs_date` date NOT NULL,

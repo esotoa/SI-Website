@@ -116,7 +116,7 @@ ALTER TABLE `Leader`
 --
 -- AUTO_INCREMENT for table `observations`
 --
-ALTER TABLE `observations`
+ALTER TABLE `Observations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
